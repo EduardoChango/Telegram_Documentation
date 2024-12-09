@@ -1,15 +1,12 @@
 from openai import OpenAI
-from dotenv import load_dotenv
 import os
-
-load_dotenv('../.env')
 
 
 
 class GPT():
 
     def __init__(self) -> None:
-        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        self.client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
     
 
 
